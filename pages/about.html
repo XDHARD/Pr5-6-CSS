@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About me page with video and audio">
+  <title>About Me</title>
+
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h1>About Me</h1>
+
+    <p>
+      I am a student in my third year learning web development
+      and practicing HTML, CSS, and JavaScript.
+    </p>
+  </div>
+
+  <div class="two-column">
+
+    <div class="card media-card">
+      <h2>My Video</h2>
+      <video controls>
+        <source src="../assets/media/media.mp4" type="video/mp4">
+        <source src="../assets/media/media.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="card media-card">
+      <h2>My Audio</h2>
+      <audio controls>
+        <source src="../assets/media/media.mp3" type="audio/mpeg">
+        <source src="../assets/media/media.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+
+  </div>
+
+</main>
+<footer>
+  <p>&copy; 2026 Gitsevych Yaroslav</p>
+</footer>
+</body>
+</html>

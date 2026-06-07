@@ -1,0 +1,331 @@
+/* ===================================
+Глобальні стилі та змінні
+=================================== */
+
+:root {
+--color-primary: #00d4ff;
+--color-accent: #8b5cf6;
+--color-bg: #0f172a;
+--color-surface: #1e293b;
+--color-text: #e2e8f0;
+--color-border: #334155;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Segoe UI", Arial, sans-serif;
+line-height: 1.6;
+color: var(--color-text);
+
+background:
+radial-gradient(circle at top left,
+rgba(0, 212, 255, 0.15),
+transparent 30%),
+radial-gradient(circle at bottom right,
+rgba(139, 92, 246, 0.15),
+transparent 30%),
+var(--color-bg);
+}
+
+/* ===================================
+Контейнери
+=================================== */
+
+.container,
+main {
+width: min(1100px, calc(100% - 32px));
+margin: 0 auto;
+}
+
+main {
+padding: 25px 0;
+}
+
+/* ===================================
+Header та навігація
+=================================== */
+
+header {
+background: rgba(15, 23, 42, 0.9);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid var(--color-border);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+nav {
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 18px;
+}
+
+nav a {
+text-decoration: none;
+color: var(--color-text);
+padding: 10px 18px;
+border-radius: 12px;
+transition: all 0.3s ease;
+}
+
+nav a:hover {
+color: var(--color-primary);
+background: rgba(0, 212, 255, 0.1);
+box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+/* ===================================
+Заголовки та текст
+=================================== */
+
+h1 {
+text-align: center;
+color: var(--color-primary);
+font-size: 3rem;
+text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
+h2 {
+color: var(--color-accent);
+margin-top: 35px;
+}
+
+p,
+li {
+font-size: 16px;
+}
+
+ul {
+padding-left: 25px;
+}
+
+/* ===================================
+Card-блоки
+=================================== */
+
+.card {
+background: rgba(30, 41, 59, 0.85);
+border: 1px solid var(--color-border);
+border-radius: 18px;
+padding: 24px;
+margin: 24px 0;
+backdrop-filter: blur(10px);
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-4px);
+
+box-shadow:
+0 0 20px rgba(0, 212, 255, 0.25),
+0 0 40px rgba(139, 92, 246, 0.15);
+}
+
+/* ===================================
+Зображення
+=================================== */
+
+image {
+max-width: 100%;
+height: auto;
+border-radius: 15px;
+border: 2px solid var(--color-border);
+
+box-shadow:
+0 0 15px rgba(0, 212, 255, 0.25);
+}
+
+figure {
+text-align: center;
+}
+
+figcaption {
+margin-top: 10px;
+color: #94a3b8;
+font-style: italic;
+}
+
+/* ===================================
+Таблиці
+=================================== */
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+}
+
+caption {
+margin-bottom: 10px;
+font-weight: bold;
+color: var(--color-primary);
+}
+
+th,
+td {
+padding: 12px;
+border: 1px solid var(--color-border);
+}
+
+th {
+background: var(--color-primary);
+color: #000;
+}
+
+tr:nth-child(even) {
+background: rgba(255, 255, 255, 0.03);
+}
+
+tr:hover {
+background: rgba(0, 212, 255, 0.08);
+}
+
+/* ===================================
+Медіа
+=================================== */
+
+video,
+audio {
+width: 100%;
+}
+
+video {
+max-width: 700px;
+border-radius: 15px;
+}
+
+/* ===================================
+Flexbox-блоки
+=================================== */
+
+.two-column {
+display: flex;
+gap: 20px;
+}
+
+.media-card {
+flex: 1;
+}
+
+/* ===================================
+Форми
+=================================== */
+
+form {
+background: rgba(30, 41, 59, 0.85);
+border: 1px solid var(--color-border);
+border-radius: 18px;
+padding: 25px;
+}
+
+.form-group {
+margin-bottom: 15px;
+}
+
+label {
+display: block;
+margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+width: 100%;
+padding: 12px 14px;
+
+background: #0f172a;
+color: white;
+
+border: 1px solid var(--color-border);
+border-radius: 10px;
+
+font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+outline: none;
+
+border-color: var(--color-primary);
+
+box-shadow:
+0 0 0 3px rgba(0, 212, 255, 0.15),
+0 0 15px rgba(0, 212, 255, 0.25);
+}
+
+fieldset {
+border: 1px solid var(--color-border);
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+legend {
+color: var(--color-primary);
+padding: 0 8px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+width: auto;
+}
+
+button {
+padding: 12px 20px;
+
+border: none;
+border-radius: 12px;
+
+background:
+linear-gradient(
+135deg,
+var(--color-primary),
+var(--color-accent)
+);
+
+color: white;
+font-size: 16px;
+cursor: pointer;
+
+transition: all 0.3s ease;
+}
+
+button:hover {
+transform: scale(1.05);
+
+box-shadow:
+0 0 20px rgba(0, 212, 255, 0.4),
+0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+/* ===================================
+Footer
+=================================== */
+
+footer {
+margin-top: 40px;
+padding: 20px;
+
+text-align: center;
+
+background: rgba(15, 23, 42, 0.9);
+border-top: 1px solid var(--color-border);
+
+color: var(--color-text);
+}
+
+.active {
+  background: rgba(0, 212, 255, 0.15);
+  color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
